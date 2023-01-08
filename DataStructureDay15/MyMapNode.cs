@@ -93,19 +93,17 @@ namespace DataStructureDay15
                 {
                     itemFound = true;
                     foundItem = item;
-                    //linkedList.Remove(item);
                 }
             }
             if (itemFound)
             {
                 linkedList.Remove(foundItem);
-                //Console.WriteLine("Removed successfully with key " + foundItem.Key);
             }
         }
 
         protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)
         {
-            LinkedList<KeyValue<K, V>> linkedList = items[position]; //0
+            LinkedList<KeyValue<K, V>> linkedList = items[position]; 
             if (linkedList == null)
             {
                 linkedList = new LinkedList<KeyValue<K, V>>();
