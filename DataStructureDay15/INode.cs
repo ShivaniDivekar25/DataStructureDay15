@@ -16,6 +16,7 @@ namespace DataStructureDay15
         public INode(int value)         //Creating node constructor
         {
             this.value = value;
+            left = right = null;
         }
     }
 }

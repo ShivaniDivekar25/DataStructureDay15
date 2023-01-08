@@ -25,5 +25,22 @@ namespace DataStructureDay15
             }
             return root;
         }
+
+        public INode root;
+        public virtual int size()       //creating size method 
+        {
+            return size(root);
+        }
+        public virtual int size(INode node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return (size(node.left) + 1 + size(node.right));
+            }
+        }
     }
 }
