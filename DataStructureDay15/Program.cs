@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Hashtable and BinarySearchTree of Data structure");
             Console.WriteLine("Enter the option given below");      //Taking user input
-            Console.WriteLine("1:Find frequency of words\n2:Find frequency of words in large paraghraph");
+            Console.WriteLine("1:Find frequency of words\n2:Find frequency of words in large paraghraph\n3:Remove avoidable word from phrase");
             int option = Convert.ToInt32(Console.ReadLine());
 
             static void CountNumbOfOccurence(string paragraph)          //Method to get final frequency
@@ -24,6 +24,10 @@
                 }
                 Console.WriteLine("Displaying after add operation");
                 hashTabe.Display();
+                string s = "avoidable";
+                hashTabe.Remove(s);
+                Console.WriteLine("After removed an item {0}", s);
+                hashTabe.Display();
             }
             switch (option)
             {
@@ -31,7 +35,10 @@
                     CountNumbOfOccurence("To be or not to be");
                     break;
                 case 2:
-                    CountNumbOfOccurence("Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations”");
+                    CountNumbOfOccurence("Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations");
+                    break;
+                case 3:
+                    CountNumbOfOccurence("Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations");
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");
